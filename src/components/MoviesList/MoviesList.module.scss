@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.root{
+    position: relative;
+    font-family: 'Orelega One', cursive;
+    .line{
+        width: 2px;
+        height: 100%;
+        background-color: #845EC2;
+        position: absolute;
+        left: 10%;
+    }
+    
+    .content{
+        padding-top: 5%;
+        .filtering{
+            width: 50%;
+            margin: 0 auto;
+        }
+        .searching{
+            input {
+                width: 50%;
+                margin: 1rem auto;
+            }
+        }
+        .cards{
+            padding: 1rem;
+            padding-left: 12%;
+            display: flex;
+            flex-wrap: wrap;
+            .cardItem{
+                width: 20%;
+                height: 350px;
+                margin: 1rem;
+                border-radius: 5px;
+                transform-style: preserve-3d;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover a{
+                    display: block;
+                    opacity: 1;
+                    top: 0;
+                }
+                .btnMore{
+                    transition: 1s;
+                    opacity: 0;
+                    padding: 1rem 2rem;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: rgba(0,0,0,.7);
+                    box-shadow: 0px 0px 10px rgba(255, 255, 255, .6);
+                    color: #fff;
+                    position: relative;
+                    top: -50px;
+                    font-family: 'Montserrat', sans-serif;
+                    transform: translateZ(60px);
+                    text-decoration: none;
+                }
+            }
+        }
+        .pagination{
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            .pagePrev, .pageNext{
+                border-radius: 50%;
+                border: none;
+                background-color: #efefef;
+                margin: 0 5px;
+            }
+            .pageList{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                list-style: none;
+                padding-left: 0;
+                margin-bottom: 0;
+                li{
+                    margin: 0 5px;
+                    button{
+                        border-radius: 50%;
+                        border: none;
+                        width: 35px;
+                        height: 35px;
+                        background-color: #efefef;
+                        color: #000;
+                    }
+                }
+                .activePage{
+                    background-color: #000;
+                    color: #efefef;
+                }
+            }
+        }
+    }
+}
